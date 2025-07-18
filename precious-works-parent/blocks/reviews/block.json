@@ -1,0 +1,9 @@
+{
+    "name": "acf/reviews",
+    "icon": "admin-comments",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+    }
+
+}

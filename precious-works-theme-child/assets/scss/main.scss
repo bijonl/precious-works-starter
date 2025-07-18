@@ -1,0 +1,8 @@
+// Import parent SCSS
+@import '../../../precious-works-parent/assets/scss/body';
+@import '../../../precious-works-parent/assets/scss/headings';
+
+// Override
+body {
+  background: green;
+}
