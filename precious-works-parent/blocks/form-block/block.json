@@ -1,9 +1,0 @@
-{
-    "name": "acf/form-block",
-    "icon": "feedback",
-    "acf": {
-        "mode": "preview",
-        "renderTemplate": "render.php"
-    }
-
-}

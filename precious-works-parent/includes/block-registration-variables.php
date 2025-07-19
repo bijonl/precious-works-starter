@@ -2,37 +2,37 @@
     'accordions' => [
         'label' => 'Accordions',
         'icon'  => 'plus-alt',
-        'description' => "These are expandable sections that open when you click them to show more information. They’re a great way to organize lots of content without taking up too much space—perfect for FAQs, big lists, or detailed info."
+        'description' => "These are expandable sections that open when you click them to show more information. They're a great way to organize lots of content without taking up too much space—perfect for FAQs, big lists, or detailed info."
     ],
     'cta' => [
         'label' => 'Call To Action',
         'icon'  => 'megaphone',
-        'description' => ''
+        'description' => "A section designed to grab attention and encourage visitors to take a specific action—like clicking a button, signing up, or getting in touch. Use it to guide people toward what matters most on your site."
     ],
     'form-block' => [
         'label' => 'Form Block',
         'icon'  => 'feedback',
-        'description' => ''
+        'description' => "Use this block to add a Gravity Form. It lets visitors send you messages, sign up, or share info easily."
     ],
     'general-content' => [
         'label' => 'General Content',
         'icon'  => 'text',
-        'description' => ''
+        'description' => "A full-width section where you can add any content you want—text, images, or anything else. It's your go-to block for putting stuff on the page."
     ],
     'homepage-hero' => [
         'label' => 'Homepage Hero',
         'icon'  => 'cover-image',
-        'description' => ''
+        'description' => "The big, attention-grabbing area at the top of your homepage. It's perfect for welcoming visitors with a headline, image, or message."
     ],
     'image-slider' => [
         'label' => 'Image Slider',
         'icon'  => 'images-alt2',
-        'description' => ''
+        'description' => "A slideshow of images that move automatically or when you click arrows. Great for showing off photos or products."
     ],
     'interior-hero' => [
         'label' => 'Interior Hero',
         'icon'  => 'format-image',
-        'description' => ''
+        'description' => "Like the Homepage Hero, but for other pages on your site. It highlights important info right at the top."
     ],
     'photo-divider' => [
         'label' => 'Photo Divider',
@@ -42,22 +42,22 @@
     'recent-posts' => [
         'label' => 'Recent Posts',
         'icon'  => 'admin-post',
-        'description' => ''
+        'description' => "Shows your latest blog posts so visitors can see what's new."
     ],
     'reviews' => [
         'label' => 'Reviews',
         'icon'  => 'star-filled',
-        'description' => ''
+        'description' => "Display customer reviews or testimonials to build trust and show off great feedback."
     ],
     'two-col-img-text' => [
         'label' => 'Two Column Image & Text',
         'icon'  => 'columns',
-        'description' => ''
+        'description' => "Split the section into two halves: one side with an image, the other with text. Great for sharing medium-length info alongside a picture."
     ],
     'wildcards' => [
         'label' => 'Wildcards',
         'icon'  => 'screenoptions',
-        'description' => ''
+        'description' => "A list of quick, easy-to-read info snippets—usually with icons—that grab attention and highlight key points."
     ],
 ); 
 

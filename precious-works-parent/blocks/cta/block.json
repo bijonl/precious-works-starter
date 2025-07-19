@@ -1,9 +1,0 @@
-{
-    "name": "acf/cta",
-    "icon": "megaphone",
-    "acf": {
-        "mode": "preview",
-        "renderTemplate": "render.php"
-    }
-
-}
