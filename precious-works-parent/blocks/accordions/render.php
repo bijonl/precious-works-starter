@@ -1,0 +1,1 @@
+<?php $accordions = get_field('accordions'); ?>

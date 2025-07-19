@@ -1,9 +1,0 @@
-{
-    "name": "acf/photo-divider",
-    "icon": "camera",
-    "acf": {
-        "mode": "preview",
-        "renderTemplate": "render.php"
-    }
-
-}
