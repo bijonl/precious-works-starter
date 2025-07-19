@@ -50,6 +50,20 @@ if ( function_exists( 'pw_register_default_blocks' ) ) {
     add_action( 'acf/init', 'pw_register_default_blocks' );
 }
 
+// Save ACF JSON to acf-json folder
+add_filter('acf/settings/save_json', function( $path ) {
+    return get_stylesheet_directory() . '/acf-json';
+});
+
+// Load ACF JSON from acf-json folder
+add_filter('acf/settings/load_json', function( $paths ) {
+    // clear default
+    $paths = [];
+    // add custom path
+    $paths[] = get_stylesheet_directory() . '/acf-json';
+    return $paths;
+});
+
 
 
 
