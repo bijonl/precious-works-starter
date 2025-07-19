@@ -1,6 +1,6 @@
 {
     "name": "acf/recent-posts",
-    "icon": "admin-comments",
+    "icon": "admin-post",
     "acf": {
         "mode": "preview",
         "renderTemplate": "render.php"

@@ -1,6 +1,6 @@
 {
-    "name": "acf/reviews",
-    "icon": "star-filled",
+    "name": "acf/accordions",
+    "icon": "arrow-down-alt2",
     "acf": {
         "mode": "preview",
         "renderTemplate": "render.php"
