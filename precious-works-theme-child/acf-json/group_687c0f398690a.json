@@ -44,6 +44,11 @@
                 "param": "block",
                 "operator": "!=",
                 "value": "acf\/photo-divider"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/homepage-hero"
             }
         ]
     ],
@@ -56,5 +61,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1752963126
+    "modified": 1753034080
 }

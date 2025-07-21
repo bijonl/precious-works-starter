@@ -9,6 +9,7 @@
 
   <h1>Hello from CHILD Theme</h1>
 
+  <?php the_content() ?>
   <?php wp_footer(); ?>
 </body>
 </html>

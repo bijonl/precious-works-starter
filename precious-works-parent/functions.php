@@ -65,6 +65,29 @@ add_filter('acf/settings/load_json', function( $paths ) {
 });
 
 
+function pw_block_section_classes($block, $role="region") {
+    $section_classes = 'pw-section '; 
+    $block_name = str_replace(' ', '-', strtolower($block['title'])); 
+    $section_classes .= $block_name.'-section '; 
+    $section_aria_label = $block['title'];
+
+    if ( !empty( $block['data']['section_aria_label'] ) ) {
+        $section_aria_label = $block['data']['section_aria_label'];
+    } elseif ( !empty( $block['data']['section_title'] ) ) {
+        $section_aria_label = $block['data']['section_title'];
+    }
+
+    $section_id = !empty($block['anchor']) ? esc_attr($block['anchor']) : esc_attr($block_name.$block['id']);
+    
+    $section_class_string = 'class="'.$section_classes.'"'; 
+    $section_id_string = 'id="'.$section_id.'"'; 
+
+    $section_ada_string = 'role="'.$role.'"'; 
+    $section_ada_string .= 'aria-label="'.$section_aria_label.'"'; 
+
+    return $section_class_string.' '.$section_id_string.' '.$section_ada_string; 
+}
+
 
 
 

@@ -1,8 +1,0 @@
-{
-    "name": "acf/recent-posts",
-    "icon": "admin-post",
-    "acf": {
-        "mode": "preview",
-        "renderTemplate": "render.php"
-    }
-}
