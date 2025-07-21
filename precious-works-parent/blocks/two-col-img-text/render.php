@@ -32,5 +32,4 @@ $text_col_width = 'col-sm-6'; ?>
     </div>
 
     <?php include(locate_template('blocks/partials/button-area.php')); ?>
-
 </section>
