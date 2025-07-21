@@ -50,7 +50,7 @@
         'description' => "Display customer reviews or testimonials to build trust and show off great feedback."
     ],
     'two-col-img-text' => [
-        'label' => 'Two Column Image & Text',
+        'label' => 'Two Column Image and Text',
         'icon'  => 'columns',
         'description' => "Split the section into two halves: one side with an image, the other with text. Great for sharing medium-length info alongside a picture."
     ],

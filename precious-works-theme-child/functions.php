@@ -9,8 +9,6 @@ define( 'PW_THEME_CHILD_VERSION', $theme->get( 'Version' ) );
 
 
 function pw_enqueue_scripts() {
-    error_log('pw_enqueue_scripts running'); // Logs to PHP error log
-    echo 'CHILD hehhhe'; // This may not output to browser at enqueue time
     // Enqueue parent style first
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/assets/dist/css/style.min.css', [], PW_THEME_CHILD_VERSION );
 
@@ -23,6 +21,8 @@ function pw_enqueue_scripts() {
 
 
 add_action( 'wp_enqueue_scripts', 'pw_enqueue_scripts', 20 );
+add_action( 'enqueue_block_editor_assets', 'pw_enqueue_scripts' );
+
 
 
 

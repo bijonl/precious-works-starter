@@ -69,6 +69,22 @@ function pw_block_section_classes($block, $role="region") {
     $section_classes = 'pw-section '; 
     $block_name = str_replace(' ', '-', strtolower($block['title'])); 
     $section_classes .= $block_name.'-section '; 
+
+    if(!empty( $block['data']['top_section_padding'])) {
+        $padding_class_top = $block['data']['top_section_padding'] === 'none' ? 'pt-0' : 'padding-standard'; 
+        $section_classes .= $padding_class_top .' '; 
+
+    } 
+
+    if(!empty( $block['data']['bottom_section_padding'])) {
+        $padding_class_bottom = $block['data']['bottom_section_padding'] === 'none' ? 'pb-0' : 'padding-standard'; 
+        $section_classes .= $padding_class_bottom .' '; 
+    } 
+
+     if(!empty( $block['data']['section_background_color'])) {
+        $section_classes .= 'background-'.$block['data']['section_background_color'].' '; 
+    } 
+    
     $section_aria_label = $block['title'];
 
     if ( !empty( $block['data']['section_aria_label'] ) ) {
@@ -77,7 +93,7 @@ function pw_block_section_classes($block, $role="region") {
         $section_aria_label = $block['data']['section_title'];
     }
 
-    $section_id = !empty($block['anchor']) ? esc_attr($block['anchor']) : esc_attr($block_name.$block['id']);
+    $section_id = !empty($block['anchor']) ? esc_attr($block['anchor']) : esc_attr($block_name.'-'.$block['id']);
     
     $section_class_string = 'class="'.$section_classes.'"'; 
     $section_id_string = 'id="'.$section_id.'"'; 

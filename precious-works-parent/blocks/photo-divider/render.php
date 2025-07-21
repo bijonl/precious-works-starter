@@ -1,4 +1,5 @@
 <?php $image = get_field('image'); ?>
+<?php include(locate_template('includes/block-registration-variables.php')); ?>
 
 <?php $has_content = !empty($image);
 
@@ -6,16 +7,6 @@ if(!$has_content) {
     include __DIR__ . '/demo.php';
     return; 
 } ?>
-
-<?php print_r($block['data']['section_aria_label']); 
-
-
-
-?>
-
-
-
-
 
 <section <?php echo pw_block_section_classes($block) ?>>
     <div class="photo-divider-container">
