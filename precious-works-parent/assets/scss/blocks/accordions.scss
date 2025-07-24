@@ -1,0 +1,43 @@
+// Accordions
+$border-color: $color-secondary;
+$accordion-padding: 16px;  
+$accordion-content-wrapper-width: 80%; 
+
+.accordions-container {
+    .accordions-row {
+        .accordions-col {
+            details {
+                &.single-accordion {
+                    margin-bottom: 20px; 
+                    border: solid 2px $border-color; 
+                    summary {
+                        padding: $accordion-padding; 
+                        button {
+                            background: none;
+                            border: 0;
+                            padding: 0;
+                            svg {
+                                transform: none;
+                                transition: transform 0.2s ease;
+                            }
+                        }
+                    }
+                    .accordion-content-wrapper {
+                        width: $accordion-content-wrapper-width; 
+                        padding: $accordion-padding; 
+                    }
+                }
+                &[open] {
+                    summary {
+                        button {
+                            svg {
+                                transform: rotate(180deg);
+                                transition: transform 0.2s ease;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
