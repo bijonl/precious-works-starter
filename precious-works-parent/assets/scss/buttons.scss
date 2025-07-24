@@ -1,3 +1,31 @@
-button {
-    
+$solid-button-background: $color-primary; 
+$solid-button-border-color: $color-primary; 
+$solid-button-text-color: $color-background; 
+$solid-button-padding-horizontal: 16px;
+$solid-button-padding-vertical: 8px;
+$solid-button-border-radius: 30px; 
+
+$solid-button-background-hover: $color-background; 
+$solid-button-text-color-hover: $color-primary; 
+$solid-button-border-color-hover: $color-primary; 
+
+
+.pw-solid-button {
+    background-color: $solid-button-background;
+    border: solid 1px $solid-button-border-color; 
+    color: $solid-button-text-color; 
+    border-radius: $solid-button-border-radius;  
+    font-weight: 400;
+    transition: all 0.2s ease-in-out; 
+    padding-left: $solid-button-padding-horizontal; 
+    padding-right: $solid-button-padding-horizontal;
+    padding-top: $solid-button-padding-vertical; 
+    padding-bottom: $solid-button-padding-vertical; 
+    text-decoration: none; 
+    &:hover {
+        font-weight: 600;
+        background-color: $solid-button-background-hover; 
+        color: $solid-button-text-color-hover; 
+        border: solid 1px $solid-button-border-color-hover; 
+    }
 }

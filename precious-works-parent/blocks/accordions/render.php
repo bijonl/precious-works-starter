@@ -36,12 +36,20 @@ $accordion_width = 'col-8'
                 } ?>
             </div>
         </div>
+
+
+        <div class="button-row row">
+            <div class="button-col <?php echo $accordion_width ?> mx-auto text-center">
+                <?php include(locate_template('blocks/partials/button-area.php')); ?>
+            </div>
+        </div>
+
+
+            
     </div>
 
 
 
 
-
-    <?php include(locate_template('blocks/partials/button-area.php')); ?>
 </section>
 
