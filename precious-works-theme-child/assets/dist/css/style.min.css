@@ -6951,6 +6951,11 @@ progress {
     display: none !important;
   }
 }
+.block-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .pw-solid-button {
   background-color: #333333;
   border: solid 1px #333333;

@@ -13,17 +13,18 @@ if(!$has_content) {
 <section <?php echo pw_block_section_classes($block) ?>>
     <div class="cta-container container">
         <div class="cta-row row">
-            <div class="cta-col col-12">
-                <?php echo $section_title ?>
-                <?php echo $section_subtitle ?>
-                 <a 
-                    href="<?php echo esc_url($section_button['url']); ?>" 
-                    target="<?php echo esc_attr($section_button['target'] ?: '_self'); ?>" 
-                    class="btn btn-primary"
-                    aria-label="<?php echo $section_button_aria_label ?>"
-                >
-                    <?php echo esc_html($section_button['title']); ?>
-                </a>
+            <div class="cta-col col-6 mx-auto text-center">
+                <?php if($section_title) { ?>
+                    <div class="cta-title-wrapper">
+                        <?php echo pw_seo_heading($section_title, $section_title_tag, 'h2') ?>
+                    </div>
+                <?php } ?>
+                <?php if($section_subtitle) { ?>
+                    <div class="cta-subtitle-wrapper">
+                        <?php echo $section_subtitle ?>
+                    </div>
+                <?php } ?>
+                <?php include(locate_template('blocks/partials/button-area.php')); ?>
             </div>
         </div>
     </div>

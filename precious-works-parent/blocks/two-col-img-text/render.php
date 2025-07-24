@@ -30,6 +30,10 @@ $text_col_width = 'col-sm-6'; ?>
             </div>
         </div>
     </div>
-
-    <?php include(locate_template('blocks/partials/button-area.php')); ?>
+  
+    <div class="button-row row">
+        <div class="button-col col-12 mx-auto text-center">
+            <?php include(locate_template('blocks/partials/button-area.php')); ?>
+        </div>
+    </div>   
 </section>

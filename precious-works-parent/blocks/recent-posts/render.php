@@ -19,14 +19,19 @@ if(empty($recent_posts)) {
         <div class="recent-posts-container container">
             <div class="recent-posts-row row">
                 <?php foreach($recent_posts as $post_id) { ?>
-                    <div class="recent-posts-col col-12">
-                        <?php include __DIR__ . '/single-post.php'; ?>
+                    <div class="recent-posts-col col-sm-4">
+                        <?php include __DIR__ . '/partials/single-post.php'; ?>
                     </div>
                 <?php } ?>
             </div>
+            <?php if($section_button) { ?>
+                <div class="button-row row">
+                    <div class="button-col col-sm-12 mx-auto text-center">
+                        <?php include(locate_template('blocks/partials/button-area.php')); ?>
+                    </div>
+                </div>   
+            <?php } ?>
          </div>
     <?php } ?>
-    <?php if($has_button_area) { 
-        include(locate_template('blocks/partials/button-area.php')); 
-    } ?>
+  
 </section>
