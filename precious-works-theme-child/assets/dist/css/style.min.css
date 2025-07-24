@@ -6990,6 +6990,14 @@ progress {
   border-radius: inherit;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .accordions-container .accordions-row .accordions-col details.single-accordion {
   margin-bottom: 20px;
   border: solid 2px #666666;
@@ -7013,6 +7021,36 @@ progress {
 .accordions-container .accordions-row .accordions-col details[open] summary button svg {
   transform: rotate(180deg);
   transition: transform 0.2s ease;
+}
+
+.homepage-hero-section {
+  height: 100vh;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.homepage-hero-section.block-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.homepage-hero-section .image-overlay {
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+.homepage-hero-section .homepage-hero-container {
+  z-index: 2;
+  position: relative;
+}
+.homepage-hero-section .homepage-hero-container .homepage-hero-row .homepage-hero-col .homepage-hero-content-wrapper .button-area-wrapper {
+  text-align: center;
+}
+
+.photo-divider-section.block-section {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /*# sourceMappingURL=style.min.css.map */
