@@ -70,7 +70,7 @@ add_filter('acf/settings/load_json', function( $paths ) {
 function pw_block_section_classes($block, $role="region") {
     $section_classes = 'pw-section '; 
     $block_name = str_replace(' ', '-', strtolower($block['title'])); 
-    $section_classes .= $block_name.'-section '; 
+    $section_classes .= $block_name.'-section block-section '; 
 
     if(!empty( $block['data']['top_section_padding'])) {
         $padding_class_top = $block['data']['top_section_padding'] === 'none' ? 'pt-0' : 'padding-standard'; 
@@ -104,6 +104,30 @@ function pw_block_section_classes($block, $role="region") {
     $section_ada_string .= 'aria-label="'.$section_aria_label.'"'; 
 
     return $section_class_string.' '.$section_id_string.' '.$section_ada_string; 
+}
+
+
+/**
+ * Returns a semantic heading with optional tag and class.
+ *
+ * @param string $title        The heading text.
+ * @param string $tag          The HTML tag to use (e.g., 'h2', 'h3'). Defaults to 'h2'.
+ * @param string $custom_class Optional CSS class(es) to apply.
+ * @return string              The heading HTML or empty string if invalid.
+ */
+function pw_seo_heading( $title, $tag = 'h2', $custom_class = '' ) {
+    if ( empty( $title ) || ! in_array( strtolower( $tag ), [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ] ) ) {
+        return '';
+    }
+
+    $class_attr = $custom_class ? ' class="' . esc_attr( trim( $custom_class ) ) . '"' : '';
+
+    return sprintf(
+        '<%1$s%2$s>%3$s</%1$s>',
+        esc_html( $tag ),
+        $class_attr,
+        esc_html( $title )
+    );
 }
 
 

@@ -7,3 +7,12 @@
 .rounded-corners {
     border-radius: 12px; 
 }
+
+.u-focus-style {
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($color-accent, 0.4);
+    border-radius: inherit; // respects rounded elements
+  }
+}

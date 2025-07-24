@@ -6979,6 +6979,12 @@ progress {
   border-radius: 12px;
 }
 
+.u-focus-style:focus, .pw-solid-button:focus, .u-focus-style:focus-visible, .pw-solid-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.4);
+  border-radius: inherit;
+}
+
 .accordions-container .accordions-row .accordions-col details.single-accordion {
   margin-bottom: 20px;
   border: solid 2px #666666;

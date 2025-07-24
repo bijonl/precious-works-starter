@@ -16,7 +16,7 @@ function pw_enqueue_scripts() {
     wp_enqueue_style( 'pw-style', get_stylesheet_directory_uri() . '/assets/dist/css/style.min.css', ['parent-style'], PW_THEME_CHILD_VERSION );
     
     // JS if needed
-    wp_enqueue_script( 'pw-main', get_stylesheet_directory_uri() . '/assets/js/main.js', [], PW_THEME_CHILD_VERSION, true );
+    wp_enqueue_script( 'pw-main', get_template_directory_uri()  . '/assets/js/main.js', [], PW_THEME_CHILD_VERSION, true );
 }
 
 

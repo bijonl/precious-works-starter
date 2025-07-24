@@ -15,12 +15,9 @@ $accordion_width = 'col-8'
 
 
 <section <?php echo pw_block_section_classes($block) ?>>
+
     <?php include(locate_template('blocks/partials/title-area.php')); ?>
-
-
-
-
-
+            
     <div class="accordions-container container">
         <div class="accordions-row row">
             <div class="accordions-col <?php echo $accordion_width ?> mx-auto">
@@ -29,7 +26,7 @@ $accordion_width = 'col-8'
                         the_row(); 
                         $title = get_sub_field('title'); 
                         $content = get_sub_field('content', false, false); 
-                        
+                        $accordion_id = 'accordion-'.get_row_index(); 
                         ?>
                         <?php include(locate_template('blocks/accordions/partials/single-accordion.php'));         
                     }
@@ -42,14 +39,7 @@ $accordion_width = 'col-8'
             <div class="button-col <?php echo $accordion_width ?> mx-auto text-center">
                 <?php include(locate_template('blocks/partials/button-area.php')); ?>
             </div>
-        </div>
-
-
-            
+        </div>   
     </div>
-
-
-
-
 </section>
 
