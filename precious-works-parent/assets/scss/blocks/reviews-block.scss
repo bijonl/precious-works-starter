@@ -1,0 +1,26 @@
+$review-border-color: black; 
+.reviews-section {
+    .reviews-container {
+        .reviews-row {
+            .reviews-col {
+                .masonry-review-card {
+                    border: solid 2px $review-border-color;  
+                    padding: 15px; 
+                    border-radius: 12px; 
+                    margin-bottom: 15px; 
+                    .review-image-wrapper {
+                        width: 100px; 
+                        padding-right: 20px; 
+                        img {
+                            border-radius: 100%;
+                            width: 100%; 
+                            aspect-ratio: 1/1;
+                            height: auto; 
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
