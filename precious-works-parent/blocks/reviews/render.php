@@ -16,22 +16,12 @@ if ($reviews && count($reviews) > 0) {
     }
 }
 
-
-
-
-?>
-
-<?php $has_content = have_rows('reviews') || $has_button_area || $has_title_area;
+$has_content = have_rows('reviews') || $has_button_area || $has_title_area;
 
 if(!$has_content) {
     include __DIR__ . '/demo.php';
     return; 
-} 
-
-$reviews_width = 'col-sm-8';  ?>
-
-
-
+} ?>
 
 <section <?php echo pw_block_section_classes($block) ?>>
     <?php include(locate_template('blocks/partials/title-area.php')); ?> 

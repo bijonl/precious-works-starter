@@ -1,10 +1,10 @@
 {
-    "key": "group_68837deb9a077",
-    "title": "Block : Reviews",
+    "key": "group_6883867571119",
+    "title": "Block : Image Gallery",
     "fields": [
         {
-            "key": "field_68837deb80455",
-            "label": "Review Content",
+            "key": "field_688386e46e522",
+            "label": "Image Gallery Content",
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -21,11 +21,39 @@
             "endpoint": 0
         },
         {
-            "key": "field_68837e0380457",
-            "label": "Reviews",
-            "name": "reviews",
+            "key": "field_688386756e520",
+            "label": "Images",
+            "name": "images",
             "aria-label": "",
-            "type": "relationship",
+            "type": "gallery",
+            "instructions": "Select Images to include in the gallery. Make sure you add alt text to all the images!",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "insert": "append",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_688386aa6e521",
+            "label": "Number of Columns",
+            "name": "number_of_columns",
+            "aria-label": "",
+            "type": "range",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -34,27 +62,17 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [
-                "reviews"
-            ],
-            "post_status": [
-                "publish"
-            ],
-            "taxonomy": "",
-            "filters": [
-                "search"
-            ],
-            "return_format": "id",
-            "min": "",
-            "max": "",
+            "default_value": "",
+            "min": 2,
+            "max": 4,
             "allow_in_bindings": 0,
-            "elements": "",
-            "bidirectional": 0,
-            "bidirectional_target": []
+            "step": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "key": "field_68837dfd80456",
-            "label": "Review Content END",
+            "key": "field_688386ef6e523",
+            "label": "Image Gallery Content END",
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -76,7 +94,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/reviews"
+                "value": "acf\/image-gallery"
             }
         ]
     ],
@@ -89,5 +107,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753450247
+    "modified": 1753450325
 }

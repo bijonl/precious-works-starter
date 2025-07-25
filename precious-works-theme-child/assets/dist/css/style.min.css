@@ -7070,4 +7070,13 @@ progress {
   padding-bottom: 0;
 }
 
+.image-gallery-col .glightbox:focus {
+  outline: 3px solid #005fcc;
+  outline-offset: 2px;
+}
+.image-gallery-col img {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
 /*# sourceMappingURL=style.min.css.map */

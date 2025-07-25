@@ -19,7 +19,15 @@ function pw_enqueue_scripts() {
     wp_enqueue_script( 'pw-main', get_template_directory_uri()  . '/assets/js/main.js', [], PW_THEME_CHILD_VERSION, true );
 }
 
+function pw_enqueue_glightbox_assets() {
+    wp_enqueue_style('glightbox', 'https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css');
+    wp_enqueue_script('glightbox', 'https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js', array(), null, true);
 
+    // Optionally initialize after DOM loads
+    wp_add_inline_script('glightbox', 'document.addEventListener("DOMContentLoaded", function() { GLightbox({ selector: ".glightbox" }); });');
+}
+
+add_action('wp_enqueue_scripts', 'pw_enqueue_glightbox_assets');
 add_action( 'wp_enqueue_scripts', 'pw_enqueue_scripts', 20 );
 add_action( 'enqueue_block_editor_assets', 'pw_enqueue_scripts' );
 

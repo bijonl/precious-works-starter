@@ -24,10 +24,10 @@
         'icon'  => 'cover-image',
         'description' => "The big, attention-grabbing area at the top of your homepage. It's perfect for welcoming visitors with a headline, image, or message."
     ],
-    'image-slider' => [
-        'label' => 'Image Slider',
+    'image-gallery' => [
+        'label' => 'Image Gallery',
         'icon'  => 'images-alt2',
-        'description' => "A slideshow of images that move automatically or when you click arrows. Great for showing off photos or products."
+        'description' => "This is an image gallery to show off multiple images. Great for showing off photos or products."
     ],
     'interior-hero' => [
         'label' => 'Interior Hero',
