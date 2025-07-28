@@ -1,60 +1,203 @@
-$header-background: white; 
-$header-logo-width: 65px; 
+// ===============================
+// Theme Variables
+// ===============================
+$header-background: white;
+$header-logo-width: 65px;
 $header-logo-height: auto;
-$header-link-color: inherit;  
+$header-link-color: inherit;
+$header-mobile-menu-bg: #eceff1;
+$header-mobile-menu-hover-bg: #cfd8dc;
+$header-mobile-menu-link-color: #333;
+$hamburger-bar-color: #616161;
+$hamburger-width: 26px;
+$hamburger-height: 26px;
+$hamburger-spacing: 8px;
+$menu-slide-width: 300px;
+$menu-z-index: 6;
+$hamburger-z-index: 7;
 
+// ===============================
+// Site Header Layout
+// ===============================
 .site-header {
-    background-color: $header-background; 
-    .site-header-container {
-        .site-header-row {
-            .site-header-logo-col {
-                .site-brand-logo-wrapper {
-                    width: $header-logo-width; 
-                    height: $header-logo-height; 
-                }
-            }
-            .header-menu-col {
-                &.desktop-menu {
-                    display: block; 
-                    @include media-breakpoint-down(lg) {
-                        display: none; 
-                    }
-                    nav {
-                        display: flex;
-                        align-items: center;
-                        justify-content: end;
-                        height: 100%; 
-                    }
-                }
-                nav {
-                     ul {
-                        display: flex;
-                        align-items: center;
-                        list-style: none;
-                        margin-bottom: 0; 
-                        li {
-                            padding-left: 25px; 
-                            padding-right: 25px; 
-                            &:first-child() {
-                                padding-left: 0; 
-                            }
-                             &:last-child() {
-                                padding-right: 0; 
-                            }
-                            a {
-                                color: $header-link-color; 
-                                text-decoration: none;
-                            }
-                        }
-                    }    
-                }
-            }
-            .mobile-menu {
-                display: none; 
-                @include media-breakpoint-down(lg) {
-                    display: block; 
-                }
-            }
+  background-color: $header-background;
+
+  .site-header-container {
+    .site-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      // Logo
+      .site-header-logo-col {
+        .site-brand-logo-wrapper {
+          width: $header-logo-width;
+          height: $header-logo-height;
         }
+      }
+
+      // Shared nav styling for desktop & mobile
+      .site-header-mobile-button-col,
+      .header-menu-col {
+        nav {
+          height: 100%;
+
+          ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+          }
+
+          a {
+            color: $header-link-color;
+            text-decoration: none;
+          }
+        }
+      }
+
+      // ===============================
+      // Desktop Navigation
+      // ===============================
+      .header-menu-col {
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+          display: block;
+
+          nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            ul {
+              display: flex;
+              align-items: center;
+
+              li {
+                padding: 0 25px;
+
+                &:first-child {
+                  padding-left: 0;
+                }
+
+                &:last-child {
+                  padding-right: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // ===============================
+      // Mobile Navigation
+      // ===============================
+      .site-header-mobile-button-col {
+        display: none;
+
+        @include media-breakpoint-down(lg) {
+          display: block;
+        }
+
+        .mobile-menu-wrapper {
+          // Hide the checkbox input
+          #menu__toggle {
+            opacity: 0;
+
+            // Transform hamburger to "X"
+            &:checked ~ .menu__btn > span {
+              transform: rotate(45deg);
+            }
+
+            &:checked ~ .menu__btn > span::before {
+              top: 0;
+              transform: rotate(0);
+            }
+
+            &:checked ~ .menu__btn > span::after {
+              top: 0;
+              transform: rotate(90deg);
+            }
+
+            // Slide in the mobile nav
+            &:checked ~ #site-navigation ul {
+              visibility: visible;
+              right: 0;
+              z-index: $menu-z-index;
+            }
+          }
+
+          // Hamburger button
+          .menu__btn {
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 20px;
+            left: auto;
+            width: $hamburger-width;
+            height: $hamburger-height;
+            cursor: pointer;
+            z-index: $hamburger-z-index;
+
+            > span,
+            > span::before,
+            > span::after {
+              display: block;
+              position: absolute;
+              width: 100%;
+              height: 2px;
+              background-color: $hamburger-bar-color;
+              transition-duration: 0.25s;
+            }
+
+            > span::before {
+              content: '';
+              top: -$hamburger-spacing;
+            }
+
+            > span::after {
+              content: '';
+              top: $hamburger-spacing;
+            }
+          }
+
+          // Slide-out menu panel
+          #site-navigation {
+            ul {
+              display: block;
+              position: fixed;
+              visibility: hidden;
+              top: 0;
+              right: -100%;
+              width: $menu-slide-width;
+              height: 100%;
+              margin: 0;
+              padding: 80px 0;
+              background-color: $header-mobile-menu-bg;
+              box-shadow: 1px 0 6px rgba(0, 0, 0, 0.2);
+              transition-duration: 0.25s;
+
+              .menu-item {
+                display: block;
+                padding: 12px 24px;
+                color: $header-mobile-menu-link-color;
+                font-size: 20px;
+                font-weight: 600;
+                text-decoration: none;
+
+                &:hover {
+                  background-color: $header-mobile-menu-hover-bg;
+                }
+
+                a {
+                  color: inherit;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }
