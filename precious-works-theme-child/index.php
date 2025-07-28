@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-  <meta charset="<?php bloginfo( 'charset' ); ?>">
-  <title><?php wp_title(); ?></title>
-  <?php wp_head(); ?>
-</head>
+<?php echo get_header() ?>
 <body <?php body_class(); ?>>
 
-  <h1>Hello from CHILD Theme</h1>
+
 
   <?php the_content() ?>
   <?php wp_footer(); ?>

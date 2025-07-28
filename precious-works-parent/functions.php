@@ -16,6 +16,7 @@ define( 'PW_THEME_VERSION', $theme->get( 'Version' ) );
 require_once get_template_directory() . '/admin/config.php';
 require_once get_template_directory() . '/includes/blocks.php';
 require_once get_template_directory() . '/includes/init.php';
+require_once get_template_directory() . '/includes/acf-options.php';
 require_once get_template_directory() . '/includes/custom-post-types/reviews.php';
 
 
