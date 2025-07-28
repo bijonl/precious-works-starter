@@ -1,0 +1,60 @@
+$header-background: white; 
+$header-logo-width: 65px; 
+$header-logo-height: auto;
+$header-link-color: inherit;  
+
+.site-header {
+    background-color: $header-background; 
+    .site-header-container {
+        .site-header-row {
+            .site-header-logo-col {
+                .site-brand-logo-wrapper {
+                    width: $header-logo-width; 
+                    height: $header-logo-height; 
+                }
+            }
+            .header-menu-col {
+                &.desktop-menu {
+                    display: block; 
+                    @include media-breakpoint-down(lg) {
+                        display: none; 
+                    }
+                    nav {
+                        display: flex;
+                        align-items: center;
+                        justify-content: end;
+                        height: 100%; 
+                    }
+                }
+                nav {
+                     ul {
+                        display: flex;
+                        align-items: center;
+                        list-style: none;
+                        margin-bottom: 0; 
+                        li {
+                            padding-left: 25px; 
+                            padding-right: 25px; 
+                            &:first-child() {
+                                padding-left: 0; 
+                            }
+                             &:last-child() {
+                                padding-right: 0; 
+                            }
+                            a {
+                                color: $header-link-color; 
+                                text-decoration: none;
+                            }
+                        }
+                    }    
+                }
+            }
+            .mobile-menu {
+                display: none; 
+                @include media-breakpoint-down(lg) {
+                    display: block; 
+                }
+            }
+        }
+    }
+}

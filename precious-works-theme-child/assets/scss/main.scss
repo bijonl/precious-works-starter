@@ -1,11 +1,14 @@
 // Import parent SCSS
-@import '../../../precious-works-parent/assets/scss/bootstrap';
 @import '../../../precious-works-parent/assets/scss/variables';
+@import '../../../precious-works-parent/assets/scss/bootstrap';
 @import '../../../precious-works-parent/assets/scss/body';
 @import '../../../precious-works-parent/assets/scss/global-styling';
 @import '../../../precious-works-parent/assets/scss/buttons';
 @import '../../../precious-works-parent/assets/scss/headings';
 @import '../../../precious-works-parent/assets/scss/util';
+
+@import '../../../precious-works-parent/assets/scss/components/header-navigation';
+
 
 @import '../../../precious-works-parent/assets/scss/blocks/reviews-block';
 @import '../../../precious-works-parent/assets/scss/blocks/accordions';

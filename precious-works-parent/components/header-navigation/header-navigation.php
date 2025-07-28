@@ -8,10 +8,20 @@ $site_name = get_site_option('blogname');
 <header id="site-header" class="site-header">
     <div class="site-header-container container">
         <div class="site-header-row row">
-            <div class="site-header-logo-col col-sm-4">
-                <?php include(locate_template('components/header-navigation/partials/header-logo.php')); ?>
+            <div class="site-header-logo-col col-sm-4 ">
+                <div class="site-brand-logo-wrapper d-flex">
+                    <?php include(locate_template('components/header-navigation/partials/header-logo.php')); ?>
+                    <div class="mobile-button-wrapper d-md-none">
+                        Button
+                    </div>
+                </div>
             </div>
-            <div class="header-menu-col col-sm-8">
+            <div class="desktop-menu header-menu-col col-sm-8">
+                <?php include(locate_template('components/header-navigation/partials/header-menu.php')); ?>
+            </div>
+
+            <div class="mobile-menu header-menu-col">
+                Mobile Menu
                 <?php include(locate_template('components/header-navigation/partials/header-menu.php')); ?>
             </div>
         </div>

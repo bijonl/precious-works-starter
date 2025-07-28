@@ -3,7 +3,7 @@
     wp_nav_menu( array(
         'theme_location' => 'Primary Menu', 
         'menu' => '2', 
-        'container_id' => 'main-header-nav-menu',
+        'container' => false,
         'fallback_cb'     => false, // avoid dumping all pages without a menu
     ) );
     ?>
