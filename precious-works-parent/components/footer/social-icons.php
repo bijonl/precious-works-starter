@@ -16,11 +16,13 @@
                     rel="noopener noreferrer"
                 >
                     <?php 
-                    if ($image_type === 'icon') {
+                    if ($image_type === 'icon') { ?>
                         // Ensure icon has aria-hidden="true" 
                         // If $icon lacks it, wrap it manually:
-                        echo $icon;
-                    } elseif ($image_type === 'image') {
+                         <span class="wildcard-icon" role="img" aria-label="<?php echo esc_attr($social_media_type); ?>">
+                            <?php echo $icon; ?>
+                        </span>
+                    <?php } elseif ($image_type === 'image') {
                         echo wp_get_attachment_image($image, 'thumbnail', false); 
                     }
                     ?>

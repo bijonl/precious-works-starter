@@ -1,28 +1,33 @@
-<?php $accordions = get_field('accordions');
+<?php $wildcards = get_field('wildcards');
 include(locate_template('blocks/partials/global-block-variables.php')); ?>
 
-<?php $has_content = have_rows('accordions') || $has_button_area || $has_title_area;
+<?php $has_content = have_rows('wildcards') || $has_button_area || $has_title_area;
 
 if(!$has_content) {
     include __DIR__ . '/demo.php';
     return; 
 } 
-
-$accordion_width = 'col-sm-8';  ?>
+ ?>
 
 <section <?php echo pw_block_section_classes($block) ?>>
     <?php include(locate_template('blocks/partials/title-area.php')); ?> 
-    <div class="accordions-container container">
-        <div class="accordions-row row">
-            <div class="accordions-col <?php echo $accordion_width ?> mx-auto">
-                <?php if(have_rows('accordions')) {
-                    while(have_rows('accordions')) {
+    <div class="wildcards-container container">
+        <div class="wildcards-row row row-cols-4" role="list">
+                <?php if(have_rows('wildcards')) {
+                    while(have_rows('wildcards')) {
                         the_row(); 
                         $title = get_sub_field('title'); 
-                        $content = get_sub_field('content', false, false); 
-                        $accordion_id = 'accordion-'.get_row_index(); 
+                        $image = get_sub_field('image'); 
+                        $icon = get_sub_field('icon'); 
+                        $button = get_sub_field('button'); 
+                        $image_type = get_sub_field('image_type'); 
+                        $content = get_sub_field('content'); 
+                        $wildcard_id = 'wildcard-'.get_row_index(); 
                         ?>
-                        <?php include(locate_template('blocks/accordions/partials/single-accordion.php'));         
+                        <div class="wildcards-col col mx-auto text-center" role="listitem">
+                        <?php include(locate_template('blocks/wildcards/partials/single-wildcard.php'));  ?>
+                        </div>     
+                <?php   
                     }
                 } ?>
             </div>
