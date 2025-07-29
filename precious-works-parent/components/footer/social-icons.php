@@ -1,9 +1,10 @@
 <div class="footer-social-wrapper" role="navigation" aria-label="Social Media Links">
-    <ul>
+    <ul class="social-list">
         <?php while(have_rows('social_media_footer', 'options')) {
             the_row(); 
             $image_type = get_sub_field('image_type'); 
-            $icon = get_sub_field('icon'); 
+            $icon = get_sub_field('icon');
+            $image = get_sub_field('image');  
             $social_media_type = get_sub_field('social_media_type'); 
             $link = get_sub_field('link');  ?>
 
@@ -19,8 +20,9 @@
                         // Ensure icon has aria-hidden="true" 
                         // If $icon lacks it, wrap it manually:
                         echo $icon;
-                        
-                    } 
+                    } elseif ($image_type === 'image') {
+                        echo wp_get_attachment_image($image, 'thumbnail', false); 
+                    }
                     ?>
                 </a>
             </li>

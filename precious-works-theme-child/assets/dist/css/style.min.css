@@ -7137,6 +7137,37 @@ progress {
   text-decoration: none;
 }
 
+.site-footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: black;
+  color: white;
+}
+.site-footer .site-footer-content-container .site-footer-content-row .social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 0;
+}
+.site-footer .site-footer-content-container .site-footer-content-row .social-list li {
+  padding-right: 25px;
+}
+.site-footer .site-footer-content-container .site-footer-content-row .social-list li a {
+  color: inherit;
+  text-decoration: none;
+}
+.site-footer .site-footer-content-container .site-footer-content-row .social-list li a img {
+  width: 25px;
+  height: 25px;
+}
+.site-footer .site-footer-content-container .site-footer-content-row .social-list li a i {
+  font-size: 26px;
+}
+.site-footer .site-footer-content-container .site-footer-content-row .footer-logo-wrapper {
+  max-width: 100px;
+}
+
 .fa-solid,
 .fa-regular,
 .fa-brands,
