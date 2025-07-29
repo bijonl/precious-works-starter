@@ -5,5 +5,10 @@
         'menu_title'    => 'Header Settings',
         'parent_slug'   => 'themes.php',
     ));
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Footer Settings',
+        'menu_title'    => 'Footer Settings',
+        'parent_slug'   => 'themes.php',
+    ));
   }
 }); ?>
