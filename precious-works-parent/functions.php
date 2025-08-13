@@ -131,6 +131,35 @@ function pw_seo_heading( $title, $tag = 'h2', $custom_class = '' ) {
     );
 }
 
+// Remove tags support from posts
+function myprefix_unregister_tags() {
+    unregister_taxonomy_for_object_type('post_tag', 'post');
+}
+add_action('init', 'myprefix_unregister_tags');
+
+/**
+ * Conditionally disable Gutenberg editor.
+ *
+ * @param bool   $use_block_editor Whether to use Gutenberg.
+ * @param WP_Post $post            The post object.
+ * @return bool
+ */
+function my_disable_gutenberg( $use_block_editor, $post ) {
+    // Example conditions:
+
+    // 1. Disable Gutenberg for a specific page template
+    if (get_page_template_slug( $post->ID ) === 'page-blog-template.php' ) {
+        remove_post_type_support( 'page', 'editor' );
+        return false;
+        
+    }
+
+    // Otherwise, use the default editor
+    return $use_block_editor;
+}
+add_filter( 'use_block_editor_for_post', 'my_disable_gutenberg', 10, 2 );
+
+
 
 
 

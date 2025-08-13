@@ -33,7 +33,7 @@ if(!$has_content) {
             </div>
         </div>
         <div class="button-row row">
-            <div class="button-col <?php echo $accordion_width ?> mx-auto text-center">
+            <div class="button-col mx-auto text-center">
                 <?php include(locate_template('blocks/partials/button-area.php')); ?>
             </div>
         </div>   

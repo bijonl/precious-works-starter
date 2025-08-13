@@ -63,9 +63,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "post"
+                "value": "acf\/general-content"
             }
         ]
     ],
@@ -78,5 +78,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753132674
+    "modified": 1755099859
 }

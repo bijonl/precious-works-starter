@@ -66,6 +66,7 @@
     'core/paragraph',
     'core/heading',
     'core/list',
+    'core/image',
     'core/separator',
     'core/spacer',
 );

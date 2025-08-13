@@ -1,4 +1,4 @@
-<a href="" aria-label="go to homepage">
+<a href="<?php echo get_home_url() ?>" aria-label="go to homepage">
     <?php echo wp_get_attachment_image($site_logo, 
     'full', 
     false, 

@@ -17,8 +17,8 @@
                 >
                     <?php 
                     if ($image_type === 'icon') { ?>
-                        // Ensure icon has aria-hidden="true" 
-                        // If $icon lacks it, wrap it manually:
+                        <!-- Ensure icon has aria-hidden="true" 
+                        If $icon lacks it, wrap it manually: -->
                          <span class="wildcard-icon" role="img" aria-label="<?php echo esc_attr($social_media_type); ?>">
                             <?php echo $icon; ?>
                         </span>

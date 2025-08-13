@@ -18,7 +18,7 @@ if(empty($recent_posts)) {
     <?php if($recent_posts) { ?>
         <div class="recent-posts-container container">
             <div class="recent-posts-row row">
-                <?php foreach($recent_posts as $post_id) { ?>
+                <?php foreach($recent_posts as $id) { ?>
                     <div class="recent-posts-col col-sm-4">
                         <?php include __DIR__ . '/partials/single-post.php'; ?>
                     </div>
