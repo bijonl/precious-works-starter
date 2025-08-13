@@ -15,5 +15,9 @@
         'menu_title'    => 'Blog Settings',
         'parent_slug'   => 'edit.php',
     ));
+    acf_add_options_page(array(
+        'page_title'    => 'Code Snippets',
+        'menu_title'    => 'Code Snippets',
+    ));
   }
 }); ?>

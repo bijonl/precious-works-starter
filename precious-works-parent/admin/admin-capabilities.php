@@ -9,6 +9,8 @@ function pw_restrict_admin_menu() {
         // Remove Theme Editor
         remove_submenu_page( 'themes.php', 'theme-editor.php' );
         remove_submenu_page( 'themes.php', 'themes.php' );
+        remove_submenu_page( 'themes.php', 'site-editor.php' );
+
 
 
         // Remove Plugin Editor

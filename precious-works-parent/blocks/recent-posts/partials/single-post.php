@@ -2,7 +2,7 @@
 
 <div class="single-post-tile">
     <div class="single-post-image-wrapper">
-        <?php echo $featured_image ? $featured_image : $default_blog_image ?>
+        <?php echo $featured_image ? $featured_image : wp_get_attachment_image($default_blog_image, 'full', false, array('class' => 'w-100 h-auto'))?>
     </div>
     <div class="single-post-title-wrapper">
         <h4><?php echo $title ?></h4>
