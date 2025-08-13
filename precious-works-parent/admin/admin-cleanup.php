@@ -8,4 +8,4 @@ function pw_unregister_post_tags() {
     unregister_taxonomy_for_object_type( 'post_tag', 'post' );
 }
 // Hook into 'init' to unregister tags after WordPress registers taxonomies
-add_action( 'init', 'pw_unregister_post_tags' ); ?>
+add_action( 'init', 'pw_unregister_post_tags' ); 

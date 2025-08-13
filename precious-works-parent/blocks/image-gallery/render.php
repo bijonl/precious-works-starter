@@ -3,6 +3,15 @@ include(locate_template('blocks/partials/global-block-variables.php'));
 
 $images = get_field('images'); 
 $number_of_columns = get_field('number_of_columns'); 
+
+
+$has_content = $images || $has_button_area || $has_title_area;
+
+if(!$has_content) {
+    include __DIR__ . '/demo.php';
+    return; 
+} 
+
 ?>
 
 <section <?php echo pw_block_section_classes($block) ?>>
