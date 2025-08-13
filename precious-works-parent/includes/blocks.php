@@ -28,8 +28,6 @@ function pw_register_block_category( $categories, $post ) {
     );
 }
 
-
-
 // 🧩 Register Blocks
 function pw_register_default_blocks() {
     include(locate_template('includes/block-registration-variables.php')); 
