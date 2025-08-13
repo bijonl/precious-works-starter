@@ -4,7 +4,7 @@
  */
 function pw_restrict_admin_menu() {
     // Check if current user is NOT the super admin
-    if ( ! current_user_can( 'manage_options' ) || get_current_user_id() === 1 ) {
+    if ( ! current_user_can( 'manage_options' ) || get_current_user_id() !== 1 ) {
 
         // Remove Theme Editor
         remove_submenu_page( 'themes.php', 'theme-editor.php' );
@@ -19,5 +19,3 @@ function pw_restrict_admin_menu() {
     }
 }
 add_action( 'admin_menu', 'pw_restrict_admin_menu', 999 );
-
-?>
