@@ -12,10 +12,10 @@
         } ?>
     </div>
     <div class="wildcard-title-wrapper">
-        <h4><?php echo esc_html($title); ?></h4>
+        <h4 class="mb-0"><?php echo esc_html($title); ?></h4>
     </div>
     <div class="wildcard-content-wrapper">
-        <p><?php echo wp_kses_post($content); ?></p>
+        <p class="mb-0"><?php echo wp_kses_post($content); ?></p>
     </div>
     <?php if(!empty($button)) { ?>
     <div class="button-area-wrapper">

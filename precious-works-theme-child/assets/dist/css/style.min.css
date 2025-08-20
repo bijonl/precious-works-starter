@@ -7515,4 +7515,33 @@ small, .small {
   }
 }
 
+@media (max-width: 991.98px) {
+  .wildcards-section .wildcards-container .wildcards-row .wildcards-col .single-wildcard-wrapper {
+    padding-bottom: 40px;
+  }
+}
+.wildcards-section .wildcards-container .wildcards-row .wildcards-col .single-wildcard-wrapper .wildcard-image-wrapper {
+  margin: auto;
+  padding-bottom: 20px;
+}
+.wildcards-section .wildcards-container .wildcards-row .wildcards-col .single-wildcard-wrapper .wildcard-image-wrapper i {
+  font-size: 65px;
+}
+.wildcards-section .wildcards-container .wildcards-row .wildcards-col .single-wildcard-wrapper .wildcard-image-wrapper:has(img) {
+  max-width: 70px;
+}
+.wildcards-section .wildcards-container .wildcards-row .wildcards-col .single-wildcard-wrapper .wildcard-image-wrapper img {
+  width: 100%;
+  height: auto;
+}
+.wildcards-section .wildcards-container .wildcards-row .wildcards-col .single-wildcard-wrapper .wildcard-title-wrapper {
+  padding-bottom: 20px;
+}
+.wildcards-section .wildcards-container .wildcards-row .wildcards-col .single-wildcard-wrapper .wildcard-content-wrapper {
+  padding-bottom: 20px;
+}
+.wildcards-section .wildcards-container .wildcards-row .wildcards-col .single-wildcard-wrapper .button-area-wrapper a.pw-solid-button {
+  min-width: auto;
+}
+
 /*# sourceMappingURL=style.min.css.map */

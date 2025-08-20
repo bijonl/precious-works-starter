@@ -12,7 +12,7 @@ if(!$has_content) {
 <section <?php echo pw_block_section_classes($block) ?>>
     <?php include(locate_template('blocks/partials/title-area.php')); ?> 
     <div class="wildcards-container container">
-        <div class="wildcards-row row row-cols-4" role="list">
+        <div class="wildcards-row row row-cols-1 row-cols-lg-4" role="list">
                 <?php if(have_rows('wildcards')) {
                     while(have_rows('wildcards')) {
                         the_row(); 
@@ -24,8 +24,8 @@ if(!$has_content) {
                         $content = get_sub_field('content'); 
                         $wildcard_id = 'wildcard-'.get_row_index(); 
                         ?>
-                        <div class="wildcards-col col mx-auto text-center" role="listitem">
-                        <?php include(locate_template('blocks/wildcards/partials/single-wildcard.php'));  ?>
+                        <div class="wildcards-col col mx-auto text-center u-focus-style" role="listitem">
+                            <?php include(locate_template('blocks/wildcards/partials/single-wildcard.php'));  ?>
                         </div>     
                 <?php   
                     }
