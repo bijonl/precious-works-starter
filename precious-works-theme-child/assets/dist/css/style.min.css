@@ -6961,6 +6961,7 @@ html :where(.wp-block) {
 }
 
 .pw-solid-button {
+  display: inline-block;
   background-color: #333333;
   border: solid 1px #333333;
   color: #ffffff;
@@ -7182,6 +7183,20 @@ html :where(.wp-block) {
 }
 .site-footer .site-footer-content-container .site-footer-content-row .footer-logo-wrapper {
   max-width: 100px;
+}
+
+.title-area-container .title-area-row .title-area-col .title-area-content-wrapper {
+  padding-bottom: 60px;
+}
+.title-area-container .title-area-row .title-area-col .title-area-content-wrapper .subtitle-wrapper {
+  padding-top: 15px;
+}
+.title-area-container .title-area-row .title-area-col .title-area-content-wrapper .subtitle-wrapper p {
+  margin-bottom: 0;
+}
+
+.button-row {
+  margin-top: 30px;
 }
 
 .reviews-section .reviews-container .reviews-row .reviews-col .masonry-review-card {

@@ -12,6 +12,7 @@ $solid-button-border-color-hover: $color-primary;
 
 .pw-solid-button {
     @extend .u-focus-style;
+    display: inline-block;
     background-color: $solid-button-background;
     border: solid 1px $solid-button-border-color; 
     color: $solid-button-text-color; 

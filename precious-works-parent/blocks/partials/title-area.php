@@ -1,4 +1,6 @@
-<?php $display_title = !empty($display_title) ? $display_title : 'h2' ?>
+<?php $display_title = !empty($display_title) ? $display_title : 'h2'; 
+$display_title .= ' mb-0'; 
+?>
 
 <?php if($has_title_area) { ?>
     <section class="title-area-container container" <?php echo esc_attr($section_title ?: 'Content section'); ?> role="region">
