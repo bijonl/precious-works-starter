@@ -6960,25 +6960,194 @@ html :where(.wp-block) {
   max-width: none;
 }
 
+.background-primary {
+  color: black;
+  background-color: red;
+}
+
+.background-secondary {
+  color: black;
+  background-color: red;
+}
+
 .pw-solid-button {
   display: inline-block;
   background-color: #333333;
   border: solid 1px #333333;
   color: #ffffff;
+  line-height: 1;
   border-radius: 30px;
   font-weight: 400;
+  min-width: 200px;
   transition: all 0.2s ease-in-out;
   padding-left: 16px;
   padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   text-decoration: none;
 }
-.pw-solid-button:hover {
+.pw-solid-button:hover, .pw-solid-button:focus, .pw-solid-button:focus-visible {
   font-weight: 600;
+  border-radius: 30px;
   background-color: #ffffff;
   color: #333333;
   border: solid 1px #333333;
+  text-decoration: none;
+}
+.pw-solid-button:focus, .pw-solid-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.4);
+  border-radius: 30px;
+}
+
+body {
+  background-color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+}
+
+h1, .h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+h2, .h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+h3, .h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+h4, .h4 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+h5, .h5 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+h6, .h6 {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #666;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: rgb(0, 76.5, 153);
+  text-decoration: underline;
+}
+
+ul, ol {
+  margin: 0 0 1em 1.25em;
+  padding: 0;
+}
+ul li, ol li {
+  margin-bottom: 0.5em;
+}
+
+blockquote {
+  font-family: "Georgia", serif;
+  font-style: italic;
+  margin: 1.5em 0;
+  padding-left: 1em;
+  border-left: 4px solid #666;
+  color: #666;
+}
+
+code, pre {
+  font-family: "Fira Code", monospace;
+  background: #f5f5f5;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+pre {
+  padding: 1em;
+  overflow-x: auto;
+}
+
+small, .small {
+  font-size: 0.875em;
+  color: #666;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+.container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .wysiwyg p:last-child() {
@@ -6989,7 +7158,7 @@ html :where(.wp-block) {
   border-radius: 12px;
 }
 
-.u-focus-style:focus, .pw-solid-button:focus, .u-focus-style:focus-visible, .pw-solid-button:focus-visible {
+.u-focus-style:focus, .u-focus-style:focus-visible {
   outline: none;
   box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.4);
   border-radius: inherit;
@@ -7215,6 +7384,23 @@ html :where(.wp-block) {
   aspect-ratio: 1/1;
   height: auto;
 }
+.reviews-section .reviews-container .reviews-row .reviews-col .masonry-review-card .review-content blockquote {
+  all: unset;
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: inherit;
+}
+
+.recent-posts-section .recent-posts-container .recent-posts-row .recent-posts-col .single-post-tile .single-post-image-wrapper {
+  padding-bottom: 20px;
+}
+.recent-posts-section .recent-posts-container .recent-posts-row .recent-posts-col .single-post-tile .single-post-title-wrapper {
+  padding-bottom: 20px;
+}
 
 .accordions-container .accordions-row .accordions-col details.single-accordion {
   margin-bottom: 20px;
@@ -7261,6 +7447,12 @@ html :where(.wp-block) {
 .homepage-hero-section .homepage-hero-container {
   z-index: 2;
   position: relative;
+}
+.homepage-hero-section .homepage-hero-container .homepage-hero-row .homepage-hero-col .homepage-hero-content-wrapper .title-area-content-wrapper {
+  padding-bottom: 30px;
+}
+.homepage-hero-section .homepage-hero-container .homepage-hero-row .homepage-hero-col .homepage-hero-content-wrapper .title-area-content-wrapper .title-wrapper .h1 {
+  font-size: 65px;
 }
 .homepage-hero-section .homepage-hero-container .homepage-hero-row .homepage-hero-col .homepage-hero-content-wrapper .button-area-wrapper {
   text-align: center;

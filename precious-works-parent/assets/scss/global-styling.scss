@@ -1,4 +1,9 @@
 $section-padding: 60px; 
+$primary-background-color: red; 
+$primary-background-text-color: black; 
+$secondary-background-color: red; 
+$secondary-background-text-color: black; 
+
 
 .block-section {
     padding-top: $section-padding; 
@@ -7,4 +12,14 @@ $section-padding: 60px;
 
 html :where(.wp-block) {
     max-width: none;
+}
+
+.background-primary {
+    color: $primary-background-text-color; 
+    background-color: $primary-background-color; 
+}
+
+.background-secondary {
+    color: $secondary-background-text-color; 
+    background-color: $secondary-background-color; 
 }

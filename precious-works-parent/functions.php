@@ -94,7 +94,9 @@ function pw_acf_load_json_paths( $paths ) {
 add_filter( 'acf/settings/load_json', 'pw_acf_load_json_paths' );
 
 
-
+add_filter( 'gform_tabindex', '__return_false' );
+add_filter( 'gform_confirmation_anchor', '__return_false' );
+add_filter( 'gform_autofocus', '__return_false' );
 
 
 

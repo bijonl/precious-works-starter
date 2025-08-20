@@ -1,0 +1,18 @@
+$recent-post-spacing: 20px; 
+
+.recent-posts-section {
+    .recent-posts-container {
+        .recent-posts-row {
+            .recent-posts-col {
+                .single-post-tile {
+                    .single-post-image-wrapper {
+                        padding-bottom: $recent-post-spacing; 
+                    }
+                    .single-post-title-wrapper {
+                        padding-bottom: $recent-post-spacing; 
+                    }
+                }
+            }
+        }
+    }
+}

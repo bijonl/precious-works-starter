@@ -21,7 +21,7 @@ if(!$has_content) {
 
     <?php if ($images) { ?>
         <div class="image-gallery-container container">
-            <div class="image-gallery-row row row-cols-<?php echo esc_attr($number_of_columns); ?>" role="list">
+            <div class="image-gallery-row row row-cols-2 row-cols-lg-<?php echo esc_attr($number_of_columns); ?>" role="list">
                 <?php foreach ($images as $image_id) { 
                     $alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
                     if (!$alt) {

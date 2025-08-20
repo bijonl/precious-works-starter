@@ -1,0 +1,103 @@
+h1 {
+    // color: white; 
+}// typography.scss
+
+// Variables
+$font-primary: 'Inter', sans-serif;
+$font-secondary: 'Georgia', serif;
+
+$font-size-base: 16px;
+$line-height-base: 1.6;
+$body-background: white; 
+$color-text: #222;
+$color-muted: #666;
+$color-link: #0066cc;
+$color-link-hover: darken($color-link, 10%);
+
+// Mixins
+@mixin heading-style($size, $weight: 700, $line-height: 1.2) {
+  font-family: $font-primary;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+  margin: 0 0 0.5em;
+}
+
+// Base
+body {
+  background-color: $body-background; 
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $color-text;
+}
+
+// Headings
+h1 { @include heading-style(2.5rem); }
+h2 { @include heading-style(2rem); }
+h3 { @include heading-style(1.75rem); }
+h4 { @include heading-style(1.5rem); }
+h5 { @include heading-style(1.25rem); }
+h6 { @include heading-style(1rem, 600); }
+
+// Paragraphs
+p {
+  margin: 0 0 1em;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: $color-muted;
+}
+
+// Links
+a {
+  color: $color-link;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $color-link-hover;
+    text-decoration: underline;
+  }
+}
+
+// Lists
+ul, ol {
+  margin: 0 0 1em 1.25em;
+  padding: 0;
+
+  li {
+    margin-bottom: 0.5em;
+  }
+}
+
+// Blockquotes
+blockquote {
+  font-family: $font-secondary;
+  font-style: italic;
+  margin: 1.5em 0;
+  padding-left: 1em;
+  border-left: 4px solid $color-muted;
+  color: $color-muted;
+}
+
+// Code
+code, pre {
+  font-family: 'Fira Code', monospace;
+  background: #f5f5f5;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+pre {
+  padding: 1em;
+  overflow-x: auto;
+}
+
+// Small text
+small {
+  font-size: 0.875em;
+  color: $color-muted;
+}

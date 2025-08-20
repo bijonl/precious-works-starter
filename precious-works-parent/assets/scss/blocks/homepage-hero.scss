@@ -1,6 +1,7 @@
 $homepage-hero-color: white; 
 $image-overlay-opacity: 0.5;
 $image-overlay-bg: black;  
+$hero-title-size: 65px; 
 
 .homepage-hero-section {
     height: 100vh;
@@ -24,6 +25,17 @@ $image-overlay-bg: black;
         .homepage-hero-row {
             .homepage-hero-col {
                 .homepage-hero-content-wrapper {
+                    .title-area-content-wrapper {
+                        padding-bottom: 30px; 
+                         .title-wrapper {
+                            .h1 {
+                                font-size: $hero-title-size; 
+                            }
+                            
+                        }
+
+                    }
+                   
                     .button-area-wrapper {
                         text-align: center;
                     }

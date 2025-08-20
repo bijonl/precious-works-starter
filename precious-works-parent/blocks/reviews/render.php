@@ -27,13 +27,13 @@ if(!$has_content) {
     <?php include(locate_template('blocks/partials/title-area.php')); ?> 
     <div class="reviews-container container">
         <div class="reviews-row row">
-            <div class="reviews-col col-sm-5 ms-auto">
+            <div class="reviews-col col-md-6 col-lg-5 ms-auto">
                 <?php foreach ($left_column as $review_id) { ?>
                     <?php include(locate_template('components/variables/review-variables.php')); ?>
                     <?php include(locate_template('blocks/reviews/partials/single-review.php')); ?>       
                 <?php }; ?>
             </div>
-            <div class="reviews-col col-sm-5 me-auto">
+            <div class="reviews-col col-md-6 col-lg-5 me-auto">
                   <?php foreach ($right_column as $review_id) { ?>
                     <?php include(locate_template('components/variables/review-variables.php')); ?>
                     <?php include(locate_template('blocks/reviews/partials/single-review.php')); ?>       

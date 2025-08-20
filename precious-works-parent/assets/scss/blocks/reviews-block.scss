@@ -1,4 +1,5 @@
 $review-border-color: black; 
+
 .reviews-section {
     .reviews-container {
         .reviews-row {
@@ -18,7 +19,18 @@ $review-border-color: black;
                             height: auto; 
                         }
                     }
-
+                    .review-content {
+                        blockquote {
+                            all: unset; // nukes all inherited styles
+                            display: block; // reapply what you need
+                            font-family: $font-primary;
+                            font-style: normal;
+                            margin: 0;
+                            padding: 0;
+                            border: none;
+                            color: inherit;
+                        }
+                    }
                 }
             }
         }
