@@ -4,3 +4,7 @@ $section-padding: 60px;
     padding-top: $section-padding; 
     padding-bottom: $section-padding; 
 }
+
+html :where(.wp-block) {
+    max-width: none;
+}

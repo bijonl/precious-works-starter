@@ -6956,6 +6956,10 @@ progress {
   padding-bottom: 60px;
 }
 
+html :where(.wp-block) {
+  max-width: none;
+}
+
 .pw-solid-button {
   background-color: #333333;
   border: solid 1px #333333;
@@ -7259,6 +7263,49 @@ progress {
 .image-gallery-col img {
   padding-top: 12px;
   padding-bottom: 12px;
+}
+
+.interior-hero-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+@media (max-width: 575.98px) {
+  .interior-hero-section {
+    padding-top: 30px;
+  }
+}
+.interior-hero-section .interior-hero-container .interior-hero-row .interior-hero-col .interior-hero-content-wrapper {
+  background-color: transparent;
+}
+.interior-hero-section .interior-hero-container .interior-hero-row .interior-hero-col .interior-hero-content-wrapper .title-wrapper {
+  width: 50%;
+}
+.interior-hero-section .interior-hero-container .interior-hero-row .interior-hero-col .interior-hero-content-wrapper .title-wrapper .title-content-wrapper {
+  width: 50%;
+  margin: auto;
+}
+.interior-hero-section .interior-hero-container .interior-hero-row .interior-hero-col .interior-hero-content-wrapper .title-wrapper .title-content-wrapper .big-title-wrapper {
+  margin-bottom: 25px;
+}
+.interior-hero-section .interior-hero-container .interior-hero-row .interior-hero-col .interior-hero-content-wrapper .title-wrapper .title-content-wrapper .subtitle-wrapper {
+  margin-bottom: 25px;
+}
+@media (max-width: 575.98px) {
+  .interior-hero-section .interior-hero-container .interior-hero-row .interior-hero-col .interior-hero-content-wrapper .title-wrapper {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+.interior-hero-section .interior-hero-container .interior-hero-row .interior-hero-col .interior-hero-content-wrapper .image-wrapper {
+  width: 50%;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (max-width: 575.98px) {
+  .interior-hero-section .interior-hero-container .interior-hero-row .interior-hero-col .interior-hero-content-wrapper .image-wrapper {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.min.css.map */

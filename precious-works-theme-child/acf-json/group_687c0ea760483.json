@@ -67,6 +67,11 @@
                 "param": "block",
                 "operator": "!=",
                 "value": "acf\/homepage-hero"
+            },
+            {
+                "param": "block",
+                "operator": "!=",
+                "value": "acf\/interior-hero"
             }
         ]
     ],
@@ -79,5 +84,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753034097
+    "modified": 1755701684
 }
