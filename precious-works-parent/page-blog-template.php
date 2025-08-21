@@ -19,18 +19,18 @@ $blogs_per_row = 2;
 ?>
 
 <?php echo get_header(); ?>
-    <section class="blog-archive-hero-section" id="blog-archive-hero">
+    <section class="blog-archive-hero-section background-primary" id="blog-archive-hero">
         <div class="blog-archive-container container">
-          <div class="blog-archive-row row">
+          <div class="blog-archive-row row align-items-center">
             <div class="blog-archive-col col">
-                <h1><?php echo $blog_title ?></h1>
-                <p><?php echo $blog_intro ?></p>
+                <h1 class="mb-0"><?php echo $blog_title ?></h1>
+                <p class="mb-0"><?php echo $blog_intro ?></p>
             </div>
           </div>
         </div>
     </section>
 
-    <section class="blog-archive-hero-section" id="blog-archive-hero">
+    <section class="blog-archive-content-section" id="blog-content-section">
         <div class="blog-posts-container container">
           <div class="blog-posts-row row row-cols-<?php echo $blogs_per_row ?>">
            <?php if($blogs->have_posts()) {

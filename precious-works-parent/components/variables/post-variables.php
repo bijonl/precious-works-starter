@@ -1,7 +1,7 @@
 <?php 
 
 $permalink = get_the_permalink($id); 
-$featured_image = get_the_post_thumbnail($id, 'full', array('class' => 'w-100 h-auto')); 
+$featured_image = get_the_post_thumbnail($id, 'full', array('class' => '')); 
 $default_blog_image = get_field('default_blog_image', 'options');
 $title = get_the_title($id); 
 $publish_date = get_the_date(); 

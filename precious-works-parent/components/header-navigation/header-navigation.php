@@ -21,7 +21,7 @@ $site_name = get_site_option('blogname');
       <!-- Mobile Hamburger & Slide-Out Menu -->
       <div class="site-header-mobile-button-col col-2 ms-auto d-lg-none">
         <div class="mobile-menu-wrapper">
-          <div class="hamburger-menu">
+          <div class="hamburger-menu d-flex justify-content-end">
             <input id="menu__toggle" type="checkbox" />
             <label class="menu__btn" for="menu__toggle">
               <span></span>

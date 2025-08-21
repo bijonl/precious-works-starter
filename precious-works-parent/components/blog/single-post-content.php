@@ -1,6 +1,6 @@
  <?php if(!empty($blog_intro)) { ?>
     <div class="post-excerpt">
-        <?php echo $blog_intro ?>
+        <p class="mb-0"><?php echo $blog_intro ?></p>
     </div>
 <?php } ?>
 <div class="post-content">

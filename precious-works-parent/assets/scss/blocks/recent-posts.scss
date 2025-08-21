@@ -7,6 +7,10 @@ $recent-post-spacing: 20px;
                 .single-post-tile {
                     .single-post-image-wrapper {
                         padding-bottom: $recent-post-spacing; 
+                        img {
+                            width: 100%; 
+                            height: auto; 
+                        }
                     }
                     .single-post-title-wrapper {
                         padding-bottom: $recent-post-spacing; 

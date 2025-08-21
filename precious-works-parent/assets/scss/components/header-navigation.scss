@@ -21,6 +21,13 @@ $hamburger-z-index: 7;
 // ===============================
 .site-header {
   background-color: $header-background;
+  padding-top: 12px; 
+  padding-bottom: 12px; 
+  &.is-scrolling {
+      position: sticky;
+      top: 0;
+      z-index: 1020;
+  }
 
   .site-header-container {
     .site-header-row {
@@ -46,6 +53,9 @@ $hamburger-z-index: 7;
             list-style: none;
             margin: 0;
             padding: 0;
+            li {
+              margin-bottom: 0; 
+            }
           }
 
           a {
@@ -131,9 +141,9 @@ $hamburger-z-index: 7;
           .menu__btn {
             display: flex;
             align-items: center;
-            position: fixed;
-            top: 20px;
-            left: auto;
+            // position: fixed;
+            // top: 20px;
+            // left: auto;
             width: $hamburger-width;
             height: $hamburger-height;
             cursor: pointer;
@@ -144,7 +154,7 @@ $hamburger-z-index: 7;
             > span::after {
               display: block;
               position: absolute;
-              width: 100%;
+              width: $hamburger-width;
               height: 2px;
               background-color: $hamburger-bar-color;
               transition-duration: 0.25s;
