@@ -1,43 +1,61 @@
-// Accordions
-$border-color: $color-secondary;
+// Variables
+$accordion-border: 2px solid $color-secondary;
 $accordion-padding: 16px;  
-$accordion-content-wrapper-width: 80%; 
+$accordion-transition: 0.25s ease; 
 
 .accordions-container {
     .accordions-row {
         .accordions-col {
-            details {
-                &.single-accordion {
-                    margin-bottom: 20px; 
-                    border: solid 2px $border-color; 
-                    summary {
-                        padding: $accordion-padding; 
-                        button {
-                            background: none;
-                            border: 0;
-                            padding: 0;
-                            svg {
-                                transform: none;
-                                transition: transform 0.2s ease;
-                            }
-                        }
+            .single-accordion {
+                border: $accordion-border;
+                margin-bottom: 20px;
+                color: inherit;
+                overflow: hidden; // keeps content neat
+
+                // Accordion button
+                .accordion {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background: none;
+                    border: 0;
+                    outline: none;
+                    padding: $accordion-padding;
+                    font-size: 1rem;
+                    text-align: left;
+                    cursor: pointer;
+                    transition: background-color $accordion-transition;
+
+                    &:hover {
+                    background-color: lighten($color-secondary, 45%);
                     }
-                    .accordion-content-wrapper {
-                        width: $accordion-content-wrapper-width; 
-                        padding: $accordion-padding; 
+
+                    // icon rotation skeleton
+                    svg {
+                    transition: transform $accordion-transition;
+                    }
+
+                    &.is-open {
+                    svg {
+                        transform: rotate(180deg);
+                    }
                     }
                 }
-                &[open] {
-                    summary {
-                        button {
-                            svg {
-                                transform: rotate(180deg);
-                                transition: transform 0.2s ease;
-                            }
-                        }
+
+                // Accordion content
+                .accordion-content {
+                    max-height: 0;
+                    overflow: hidden;
+                    padding: 0 $accordion-padding; // horizontal only
+                    transition: max-height $accordion-transition, padding $accordion-transition;
+
+                    // when open (via inline JS height)
+                    &.is-open {
+                    padding: $accordion-padding; // add vertical padding once open
                     }
                 }
-            }
+            }       
         }
     }
 }

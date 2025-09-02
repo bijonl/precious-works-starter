@@ -1,21 +1,9 @@
-<details class="single-accordion rounded-corners" id="<?php echo $accordion_id ?>">
-    <summary 
-        class="d-flex justify-content-between align-items-center"
-        id="<?= $accordion_id ?>-header"
-        aria-controls="<?= $accordion_id ?>-content"
-        aria-expanded="false"  
-    >
-        <span class="mb-0 h6"><?php echo $title ?></span>
-        <button>
-            <?php include(locate_template('blocks/accordions/partials/accordion-button.php')); ?>
-        </button>
-    </summary>
-    <div 
-        class="accordion-content-wrapper wysiwyg"
-        id="<?= $accordion_id ?>-content"
-        role="region"
-        aria-labelledby="<?= $accordion_id ?>-header"  
-    >
-        <?php echo $content ?>
-    </div>
-</details>    
+<div class="single-accordion">
+    <button class="accordion" data-accordion-id="<?php echo $accordion_id ?>">
+        <h6 class="mb-0"><?php echo $title ?></h6>
+        <?php include(locate_template('blocks/accordions/partials/accordion-button.php'));  ?>       
+    </button>
+  <div class="accordion-content" id="<?php echo $accordion_id ?>" >
+    <?php echo $content ?>
+  </div>
+</div>

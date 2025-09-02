@@ -29,17 +29,32 @@ function pw_register_block_category( $categories, $post ) {
 }
 
 // 🧩 Register Blocks
+// 🧩 Register Blocks
 function pw_register_default_blocks() {
     include(locate_template('includes/block-registration-variables.php')); 
 
     foreach ( $default_blocks as $block_slug => $block_data ) {
+        $child_template  = get_stylesheet_directory() . '/blocks/' . $block_slug . '/render.php';
+        $parent_template = get_template_directory() . '/blocks/' . $block_slug . '/render.php';
+
+        // Debugging: log paths
+        error_log("Checking block: $block_slug");
+        error_log("Child path: $child_template " . ( file_exists($child_template) ? '[FOUND]' : '[MISSING]' ));
+        error_log("Parent path: $parent_template " . ( file_exists($parent_template) ? '[FOUND]' : '[MISSING]' ));
+
+        // Pick render template
+        $render_template = file_exists($child_template) ? $child_template : $parent_template;
+
+        // Extra safeguard: log chosen template
+        error_log("Using template for $block_slug: $render_template");
+
         acf_register_block_type([
             'name'            => $block_slug,
             'title'           => $block_data['label'],
             'description'     => !empty($block_data['description']) ? $block_data['description'] : '' , 
             'category'        => 'precious-works-blocks',
             'icon'            => $block_data['icon'],
-            'render_template' => get_template_directory() . '/blocks/' . $block_slug . '/render.php',
+            'render_template' => $render_template,
             'mode'            => 'preview',
             'supports'        => [
                 'anchor' => true,
@@ -47,6 +62,7 @@ function pw_register_default_blocks() {
         ]);
     }
 }
+
 
 
 function pw_limit_allowed_blocks( $allowed_blocks, $editor_context ) {
