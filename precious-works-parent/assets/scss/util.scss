@@ -12,6 +12,24 @@
     color: inherit; 
 }
 
+.background-primary {
+    color: $primary-background-text-color; 
+    background-color: $primary-background-color; 
+}
+
+.background-secondary {
+    color: $secondary-background-text-color; 
+    background-color: $secondary-background-color; 
+}
+
+.heading-font {
+    font-family: $heading-font;
+}
+
+.body-text-font {
+    font-family: $body-text-font;
+}
+
 .u-focus-style {
   &:focus,
   &:focus-visible {

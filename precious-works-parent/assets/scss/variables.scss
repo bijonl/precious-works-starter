@@ -10,15 +10,41 @@ $color-accent-hover:    #005fa3;
 $color-error:           #cc0000;
 $color-success:         #2e7d32;
 
-// Text Colors (optional aliases for readability)
-$color-text:            $color-primary;
-$color-subtext:         $color-secondary;
-$color-link:            $color-accent;
-$color-link-hover:      $color-accent-hover;
+// Font Variables
+$font-primary: 'Inter', sans-serif;
+$font-secondary: 'Georgia', serif;
+$heading-font: $font-primary; 
+$body-text-font: $font-secondary; 
+$paragraph-font: $font-secondary; 
+$base-font-size: 16px; 
+$line-height-base: 1.6;
 
-// Primary font stack (for headings and important text)
-$font-family-primary:   'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-// Secondary font stack (for body text)
-$font-family-secondary: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-// System font stack (fallback)
-$font-family-system:    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+// Text Colors
+$base-text-color: #222; 
+$heading-font-color: #222; 
+$link-color: #0066cc; 
+$color-muted: #666;
+$link-hover-color: #222; 
+
+// Background Colors
+$body-background: white; 
+$primary-background-color: red; 
+$primary-background-text-color: black; 
+$secondary-background-color: red; 
+$secondary-background-text-color: black; 
+
+// Button Variables
+$solid-button-background: $color-primary; 
+$solid-button-border-color: $color-primary; 
+$solid-button-text-color: $color-background; 
+$solid-button-padding-horizontal: 16px;
+$solid-button-padding-vertical: 12px;
+$solid-button-border-radius: 30px; 
+$solid-button-min-width: 200px; 
+
+$solid-button-background-hover: $color-background; 
+$solid-button-text-color-hover: $color-primary; 
+$solid-button-border-color-hover: $color-primary; 
+
+
+

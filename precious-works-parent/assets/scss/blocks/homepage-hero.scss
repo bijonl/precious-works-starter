@@ -1,10 +1,7 @@
-$homepage-hero-color: white; 
-$image-overlay-opacity: 0.5;
-$image-overlay-bg: black;  
-$hero-title-size: 65px; 
+
 
 .homepage-hero-section {
-    height: 100vh;
+    height: $homepage-hero-height;
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;

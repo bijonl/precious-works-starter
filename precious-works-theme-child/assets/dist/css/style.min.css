@@ -1,4 +1,32 @@
 @charset "UTF-8";
+.media-frame-title h1, .media-frame-title .h1 {
+  padding: 0 16px;
+  color: black !important;
+  font-size: 22px !important;
+  font-family: inherit !important;
+  line-height: 2.27272727 !important;
+  margin: 0 !important;
+}
+
+#link-modal-title, #link-selector {
+  color: black;
+  font-family: inherit !important;
+}
+
+.media-attachments-filter-heading {
+  color: black;
+}
+
+.image-details .media-embed h2, .image-details .media-embed .h2, .media-sidebar h2, .media-sidebar .h2 {
+  position: relative !important;
+  font-weight: 600 !important;
+  font-family: inherit !important;
+  text-transform: uppercase;
+  font-size: 12px !important;
+  color: #646970 !important;
+  margin: 24px 0 8px !important;
+}
+
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -72,7 +100,7 @@
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
-  --bs-body-line-height: 1.5;
+  --bs-body-line-height: 1.6;
   --bs-body-color: #212529;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg: #fff;
@@ -88,11 +116,11 @@
   --bs-tertiary-bg: #f8f9fa;
   --bs-tertiary-bg-rgb: 248, 249, 250;
   --bs-heading-color: inherit;
-  --bs-link-color: #0d6efd;
-  --bs-link-color-rgb: 13, 110, 253;
+  --bs-link-color: #0066cc;
+  --bs-link-color-rgb: 0, 102, 204;
   --bs-link-decoration: underline;
-  --bs-link-hover-color: rgb(10.4, 88, 202.4);
-  --bs-link-hover-color-rgb: 10, 88, 202;
+  --bs-link-hover-color: #222;
+  --bs-link-hover-color-rgb: 34, 34, 34;
   --bs-code-color: #d63384;
   --bs-highlight-color: #212529;
   --bs-highlight-bg: rgb(255, 242.6, 205.4);
@@ -3409,7 +3437,7 @@ progress {
 }
 
 .lh-base {
-  line-height: 1.5 !important;
+  line-height: 1.6 !important;
 }
 
 .lh-lg {
@@ -6951,23 +6979,27 @@ progress {
     display: none !important;
   }
 }
+body {
+  background-color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+}
+
 .block-section {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media (max-width: 575.98px) {
+  .block-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
 
 html :where(.wp-block) {
   max-width: none;
-}
-
-.background-primary {
-  color: black;
-  background-color: red;
-}
-
-.background-secondary {
-  color: black;
-  background-color: red;
 }
 
 .pw-solid-button {
@@ -7000,20 +7032,11 @@ html :where(.wp-block) {
   border-radius: 30px;
 }
 
-body {
-  background-color: white;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #222;
-}
-
 h1, .h1 {
   font-family: "Inter", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 0.5em;
 }
 
 h2, .h2 {
@@ -7021,7 +7044,6 @@ h2, .h2 {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 0.5em;
 }
 
 h3, .h3 {
@@ -7029,7 +7051,6 @@ h3, .h3 {
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 0.5em;
 }
 
 h4, .h4 {
@@ -7037,7 +7058,6 @@ h4, .h4 {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 0.5em;
 }
 
 h5, .h5 {
@@ -7045,7 +7065,6 @@ h5, .h5 {
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 0.5em;
 }
 
 h6, .h6 {
@@ -7053,7 +7072,6 @@ h6, .h6 {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.2;
-  margin: 0 0 0.5em;
 }
 
 p {
@@ -7071,7 +7089,7 @@ a {
   text-decoration: none;
 }
 a:hover, a:focus {
-  color: rgb(0, 76.5, 153);
+  color: #222;
   text-decoration: underline;
 }
 
@@ -7160,6 +7178,24 @@ small, .small {
 
 .color-inherit {
   color: inherit;
+}
+
+.background-primary {
+  color: black;
+  background-color: red;
+}
+
+.background-secondary {
+  color: black;
+  background-color: red;
+}
+
+.heading-font {
+  font-family: "Inter", sans-serif;
+}
+
+.body-text-font {
+  font-family: "Georgia", serif;
 }
 
 .u-focus-style:focus, .u-focus-style:focus-visible {
@@ -7556,29 +7592,43 @@ small, .small {
   padding-bottom: 20px;
 }
 
-.accordions-container .accordions-row .accordions-col details.single-accordion {
+.accordions-container .accordions-row .accordions-col .single-accordion {
+  border: 2px solid #666666;
   margin-bottom: 20px;
-  border: solid 2px #666666;
+  color: inherit;
+  overflow: hidden;
 }
-.accordions-container .accordions-row .accordions-col details.single-accordion summary {
-  padding: 16px;
-}
-.accordions-container .accordions-row .accordions-col details.single-accordion summary button {
+.accordions-container .accordions-row .accordions-col .single-accordion .accordion {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: none;
   border: 0;
-  padding: 0;
-}
-.accordions-container .accordions-row .accordions-col details.single-accordion summary button svg {
-  transform: none;
-  transition: transform 0.2s ease;
-}
-.accordions-container .accordions-row .accordions-col details.single-accordion .accordion-content-wrapper {
-  width: 80%;
+  outline: none;
   padding: 16px;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
 }
-.accordions-container .accordions-row .accordions-col details[open] summary button svg {
+.accordions-container .accordions-row .accordions-col .single-accordion .accordion:hover {
+  background-color: rgb(216.75, 216.75, 216.75);
+}
+.accordions-container .accordions-row .accordions-col .single-accordion .accordion svg {
+  transition: transform 0.25s ease;
+}
+.accordions-container .accordions-row .accordions-col .single-accordion .accordion.is-open svg {
   transform: rotate(180deg);
-  transition: transform 0.2s ease;
+}
+.accordions-container .accordions-row .accordions-col .single-accordion .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 16px;
+  transition: max-height 0.25s ease, padding 0.25s ease;
+}
+.accordions-container .accordions-row .accordions-col .single-accordion .accordion-content.is-open {
+  padding: 16px;
 }
 
 .homepage-hero-section {

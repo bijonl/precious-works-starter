@@ -1,45 +1,3 @@
-h1 {
-    // color: white; 
-}// typography.scss
-
-// Variables
-$font-primary: 'Inter', sans-serif;
-$font-secondary: 'Georgia', serif;
-
-$font-size-base: 16px;
-$line-height-base: 1.6;
-$body-background: white; 
-$color-text: #222;
-$color-muted: #666;
-$color-link: #0066cc;
-$color-link-hover: darken($color-link, 10%);
-
-// Mixins
-@mixin heading-style($size, $weight: 700, $line-height: 1.2) {
-  font-family: $font-primary;
-  font-size: $size;
-  font-weight: $weight;
-  line-height: $line-height;
-  margin: 0 0 0.5em;
-}
-
-// Base
-body {
-  background-color: $body-background; 
-  font-family: $font-primary;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  color: $color-text;
-}
-
-// Headings
-h1 { @include heading-style(2.5rem); }
-h2 { @include heading-style(2rem); }
-h3 { @include heading-style(1.75rem); }
-h4 { @include heading-style(1.5rem); }
-h5 { @include heading-style(1.25rem); }
-h6 { @include heading-style(1rem, 600); }
-
 // Paragraphs
 p {
   margin: 0 0 1em;
@@ -53,12 +11,12 @@ p {
 
 // Links
 a {
-  color: $color-link;
+  color: $link-color;
   text-decoration: none;
 
   &:hover,
   &:focus {
-    color: $color-link-hover;
+    color: $link-hover-color;
     text-decoration: underline;
   }
 }
