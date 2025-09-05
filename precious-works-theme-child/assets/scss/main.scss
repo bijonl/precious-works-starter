@@ -2,22 +2,19 @@
 @import '../../../precious-works-parent/assets/scss/variables';
 @import '../../../precious-works-parent/assets/scss/block-variables';
 @import '../../../precious-works-parent/assets/scss/admin-overrides';
-
-
 @import '../../../precious-works-parent/assets/scss/bootstrap';
-@import '../../../precious-works-parent/assets/scss/global-styling';
-@import '../../../precious-works-parent/assets/scss/buttons';
-@import '../../../precious-works-parent/assets/scss/heading-font';
-
-@import '../../../precious-works-parent/assets/scss/typography';
-@import '../../../precious-works-parent/assets/scss/container-styling';
-
 @import '../../../precious-works-parent/assets/scss/util';
+
+
+@import '../../../precious-works-parent/assets/scss/base-styles/buttons';
+@import '../../../precious-works-parent/assets/scss/base-styles/container-styling';
+@import '../../../precious-works-parent/assets/scss/base-styles/global-styling';
+@import '../../../precious-works-parent/assets/scss/base-styles/heading-font';
+@import '../../../precious-works-parent/assets/scss/base-styles/typography';
 
 
 @import '../../../precious-works-parent/assets/scss/templates/blog-archive';
 @import '../../../precious-works-parent/assets/scss/templates/blog-single';
-
 @import '../../../precious-works-parent/assets/scss/components/header-navigation';
 @import '../../../precious-works-parent/assets/scss/components/footer';
 @import '../../../precious-works-parent/assets/scss/components/partials/title-area';
