@@ -27,4 +27,3 @@ function pw_disable_gutenberg( $use_block_editor, $post ) {
 
 // Apply the filter for Gutenberg editor usage
 add_filter( 'use_block_editor_for_post', 'pw_disable_gutenberg', 10, 2 );
-?>

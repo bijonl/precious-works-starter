@@ -1,8 +1,4 @@
-<?php
-/**
- * Hide dangerous admin menus for non-super-admins
- */
-function pw_restrict_admin_menu() {
+<?php function pw_restrict_admin_menu() {
     // Check if current user is NOT the super admin
     if ( ! current_user_can( 'manage_options' ) || get_current_user_id() !== 1 ) {
 
@@ -21,3 +17,7 @@ function pw_restrict_admin_menu() {
     }
 }
 add_action( 'admin_menu', 'pw_restrict_admin_menu', 999 );
+
+/**
+ * Hide dangerous admin menus for non-super-admins
+ */

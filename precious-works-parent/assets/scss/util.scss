@@ -4,6 +4,25 @@
     }
 }
 
+.nav-list-style {
+    list-style: none;
+    margin-left: 0; 
+    margin-bottom: 0;
+    display: flex; 
+    align-items: center;
+    &.column-list {
+        flex-direction: column;
+    }
+    li {
+        line-height: 1;
+        margin-bottom: 0; 
+        a {
+            text-decoration: none;
+            color: inherit; 
+        }
+    }
+}
+
 .rounded-corners {
     border-radius: 12px; 
 }

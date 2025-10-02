@@ -1,20 +1,4 @@
-<?php
-/**
- * Disable comments everywhere in WordPress
- *
- * This snippet:
- *  - Removes comment and trackback support for all post types
- *  - Closes comments and pings on the front-end
- *  - Hides existing comments
- *  - Removes comment-related admin menu and redirects
- *  - Removes the dashboard recent comments widget
- *  - Removes comments from media attachments
- */
-
-/**
- * Disable support for comments and trackbacks in all post types
- */
-function pw_disable_comments_post_types_support() {
+<?php function pw_disable_comments_post_types_support() {
     foreach ( get_post_types() as $post_type ) {
         if ( post_type_supports( $post_type, 'comments' ) ) {
             remove_post_type_support( $post_type, 'comments' );
@@ -79,4 +63,20 @@ function pw_disable_comments_media() {
     remove_post_type_support( 'attachment', 'comments' );
 }
 add_action( 'init', 'pw_disable_comments_media' );
-?>
+
+/**
+ * Disable comments everywhere in WordPress
+ *
+ * This snippet:
+ *  - Removes comment and trackback support for all post types
+ *  - Closes comments and pings on the front-end
+ *  - Hides existing comments
+ *  - Removes comment-related admin menu and redirects
+ *  - Removes the dashboard recent comments widget
+ *  - Removes comments from media attachments
+ */
+
+/**
+ * Disable support for comments and trackbacks in all post types
+ */
+

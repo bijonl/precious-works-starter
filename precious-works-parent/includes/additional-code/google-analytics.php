@@ -8,7 +8,7 @@ function pw_inject_google_analytics_head() {
         }
     }
 }
-add_action( 'wp_head', 'pw_inject_google_analytics_head', 1 );
+add_action( 'wp_head', 'pw_inject_google_analytics_head', 0 );
 
 // Body snippet
 function pw_inject_google_analytics_body() {

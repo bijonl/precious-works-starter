@@ -27,4 +27,3 @@ add_filter('manage_post_posts_columns', 'pw_disable_yoast_columns', 20);
 
 // Apply filter to pages list table
 add_filter('manage_page_posts_columns', 'pw_disable_yoast_columns', 20);
-?>

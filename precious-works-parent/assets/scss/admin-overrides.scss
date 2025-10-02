@@ -44,4 +44,8 @@ $heading-exclusions:
   @return $result;
 }
 
+.media-modal .media-frame .media-search-input-label {
+  color: black; 
+}
+
 $exclude: not-selectors($heading-exclusions);

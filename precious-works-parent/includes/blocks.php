@@ -38,15 +38,15 @@ function pw_register_default_blocks() {
         $parent_template = get_template_directory() . '/blocks/' . $block_slug . '/render.php';
 
         // Debugging: log paths
-        error_log("Checking block: $block_slug");
-        error_log("Child path: $child_template " . ( file_exists($child_template) ? '[FOUND]' : '[MISSING]' ));
-        error_log("Parent path: $parent_template " . ( file_exists($parent_template) ? '[FOUND]' : '[MISSING]' ));
+        // error_log("Checking block: $block_slug");
+        // error_log("Child path: $child_template " . ( file_exists($child_template) ? '[FOUND]' : '[MISSING]' ));
+        // error_log("Parent path: $parent_template " . ( file_exists($parent_template) ? '[FOUND]' : '[MISSING]' ));
 
         // Pick render template
         $render_template = file_exists($child_template) ? $child_template : $parent_template;
 
         // Extra safeguard: log chosen template
-        error_log("Using template for $block_slug: $render_template");
+        // error_log("Using template for $block_slug: $render_template");
 
         acf_register_block_type([
             'name'            => $block_slug,
@@ -75,4 +75,29 @@ function pw_limit_allowed_blocks( $allowed_blocks, $editor_context ) {
     }, array_keys( $default_blocks ) );
 
     return array_merge( $allowed_core_blocks, $acf_blocks );
-} ?>
+} 
+
+function pw_headings_paragraphs_in_bootstrap( $block_content, $block ) {
+    // Only modify frontend (not admin/editor)
+    if ( is_admin() ) {
+        return $block_content;
+    }
+
+    // Target core heading and paragraph blocks
+    if ( $block['blockName'] === 'core/heading' || $block['blockName'] === 'core/paragraph' ) {
+        if ( trim( $block_content ) !== '' ) {
+            $block_content = '<div class="container"><div class="row"><div class="col-12">'
+                           . $block_content
+                           . '</div></div></div>';
+        }
+    }
+
+    return $block_content;
+}
+add_filter( 'render_block', 'pw_headings_paragraphs_in_bootstrap', 10, 2 );
+
+
+
+
+
+?>

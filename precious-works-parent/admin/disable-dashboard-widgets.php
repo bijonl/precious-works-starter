@@ -1,11 +1,4 @@
-<?php
-/**
- * Remove unnecessary dashboard widgets
- * 
- * This function cleans up the WordPress admin dashboard by removing default
- * widgets and some plugin widgets like Yoast SEO or Gravity Forms.
- */
-function pw_remove_dashboard_widgets() {
+<?php function pw_remove_dashboard_widgets() {
 
     // Default WordPress widgets
 
@@ -62,4 +55,10 @@ function pw_remove_dashboard_widgets() {
 
 // Hook our function to the dashboard setup action
 add_action('wp_dashboard_setup', 'pw_remove_dashboard_widgets');
-?>
+
+/**
+ * Remove unnecessary dashboard widgets
+ * 
+ * This function cleans up the WordPress admin dashboard by removing default
+ * widgets and some plugin widgets like Yoast SEO or Gravity Forms.
+ */
