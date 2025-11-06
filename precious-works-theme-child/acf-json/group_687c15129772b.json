@@ -44,6 +44,35 @@
             "append": ""
         },
         {
+            "key": "field_68efe0576174a",
+            "label": "Form Width",
+            "name": "form_width",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "12": "Full Width",
+                "6": "Narrow Width"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
             "key": "field_687c1527c7560",
             "label": "Form Content End",
             "name": "",
@@ -80,5 +109,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1752963145
+    "display_title": "",
+    "modified": 1760551030
 }
