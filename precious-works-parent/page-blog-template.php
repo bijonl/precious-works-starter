@@ -41,8 +41,10 @@ $blogs_per_row = 2;
                         <div class="blog-posts-col col">
                             <?php include locate_template('components/blog/archive-blog-tile.php'); ?>
                         </div>
-                <?php
+                <?php wp_reset_postdata(); 
+
                     }
+                    wp_reset_postdata(); 
                 } ?>
           </div>
         </div>

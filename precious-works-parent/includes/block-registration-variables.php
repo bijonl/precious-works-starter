@@ -49,6 +49,11 @@
         'icon'  => 'star-filled',
         'description' => "Display customer reviews or testimonials to build trust and show off great feedback."
     ],
+    'stats' => [
+        'label' => 'Stats',
+        'icon'  => 'number',
+        'description' => "This allows you to provide quick stats at a glance."
+    ],
     'two-col-img-text' => [
         'label' => 'Two Column Image and Text',
         'icon'  => 'columns',

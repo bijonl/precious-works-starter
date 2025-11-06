@@ -1,4 +1,5 @@
 <?php $wildcards = get_field('wildcards');
+$cards_per_row = get_field('cards_per_row') ? get_field('cards_per_row') : 4;
 include(locate_template('blocks/partials/global-block-variables.php')); ?>
 
 <?php $has_content = have_rows('wildcards') || $has_button_area || $has_title_area;
@@ -12,7 +13,7 @@ if(!$has_content) {
 <section <?php echo pw_block_section_classes($block) ?>>
     <?php include(locate_template('blocks/partials/title-area.php')); ?> 
     <div class="wildcards-container container">
-        <div class="wildcards-row row row-cols-1 row-cols-lg-4" role="list">
+        <div class="wildcards-row row row-cols-1 row-cols-lg-<?php echo $cards_per_row ?>" role="list">
                 <?php if(have_rows('wildcards')) {
                     while(have_rows('wildcards')) {
                         the_row(); 
