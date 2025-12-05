@@ -28,11 +28,13 @@ if(!$has_content) {
                 } ?>
             </div>
         </div>
-        <div class="button-row row">
-            <div class="button-col mx-auto text-center">
-                <?php include(locate_template('blocks/partials/button-area.php')); ?>
-            </div>
-        </div>   
+        <?php if($section_button) { ?>
+            <div class="button-row row">
+                <div class="button-col mx-auto text-center">
+                    <?php include(locate_template('blocks/partials/button-area.php')); ?>
+                </div>
+            </div> 
+        <?php } ?>
     </div>
 </section>
 

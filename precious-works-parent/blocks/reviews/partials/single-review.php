@@ -5,11 +5,11 @@
         </blockquote>
     </div>
     <footer class="review-meta-wrapper d-flex align-items-center">
-        <?php if (!empty($review_image)) { ?>
-            <div class="review-image-wrapper">
-                <?php echo $review_image ?>
-            </div>
-        <?php } ?>
+ 
+        <div class="review-image-wrapper">
+            <?php echo $review_image ? $review_image : wp_get_attachment_image($default_review_image, 'thumbnail', false);  ?>
+        </div>
+      
         <div class="review-meta">
             <?php if ($person) { ?>
                 <p id="review-<?php echo $review_id; ?>-person" class="review-meta person mb-0 fw-bold">

@@ -15,6 +15,11 @@
         'menu_title'    => 'Blog Settings',
         'parent_slug'   => 'edit.php',
     ));
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Reviews Settings',
+        'menu_title'    => 'Reviews Settings',
+        'parent_slug'   => 'edit.php?post_type=reviews',
+    ));
     acf_add_options_page(array(
         'page_title'    => 'Code Snippets',
         'menu_title'    => 'Code Snippets',
