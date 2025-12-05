@@ -83,8 +83,14 @@ function pw_headings_paragraphs_in_bootstrap( $block_content, $block ) {
         return $block_content;
     }
 
-    // Target core heading and paragraph blocks
-    if ( $block['blockName'] === 'core/heading' || $block['blockName'] === 'core/paragraph' ) {
+    // Only wrap if the post type is NOT 'post'
+    $post_type = get_post_type();
+    if ( $post_type === 'post' ) {
+        return $block_content;
+    }
+
+    // Target core heading, paragraph, and list blocks
+    if ( in_array( $block['blockName'], ['core/heading', 'core/paragraph', 'core/list'] ) ) {
         if ( trim( $block_content ) !== '' ) {
             $block_content = '<div class="container"><div class="row"><div class="col-12">'
                            . $block_content
@@ -95,6 +101,7 @@ function pw_headings_paragraphs_in_bootstrap( $block_content, $block ) {
     return $block_content;
 }
 add_filter( 'render_block', 'pw_headings_paragraphs_in_bootstrap', 10, 2 );
+
 
 
 

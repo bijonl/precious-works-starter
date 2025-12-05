@@ -86,7 +86,7 @@ function pw_seo_heading( $title, $tag = 'h2', $custom_class = '' ) {
         '<%1$s%2$s>%3$s</%1$s>',
         esc_html( $tag ),        // heading tag
         $class_attr,             // optional class attribute
-        esc_html( $title )       // heading content
+        $title        // heading content
     );
 }
 ?>
